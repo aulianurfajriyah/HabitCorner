@@ -4,4 +4,4 @@ Habit Corner thrives to assist its user on building a healthy habit/lifestyle. T
 Nama Kelompok : AFAyk
 Ketua Kelompok :  Aulia Nur Fajriyah (20/456360/TK/50490) 
 Anggota 1 : 
-Anggota 2 : 
+Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133
