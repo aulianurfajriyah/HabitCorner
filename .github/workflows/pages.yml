@@ -2,6 +2,8 @@
 name: HabitCorner
 theme: staticHTML
 title: Habit Corner
+description: Habit Corner thrives to assist its user on building a healthy habit/lifestyle. This app is desktop application that will displayed in the corner of your home page.
+
 on:
   # Runs on pushes targeting the default branch
   push:
