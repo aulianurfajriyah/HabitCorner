@@ -4,4 +4,4 @@
 <p>Nama Kelompok : AFAyk</p>
 <p>Ketua Kelompok :  Aulia Nur Fajriyah - 20/456360/TK/50490  (Software Architect)</p>
 <p>Anggota 1 : Adhyaksa Zhalifunnas - 20/463586/TK/51578 (Back-End Developer)</p>
-<p>Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133</p>
+<p>Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133 (Front-End Developer)</p>
