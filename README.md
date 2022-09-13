@@ -7,10 +7,4 @@
 <p>Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133 (Front-End Developer)</p>
 
 <h4>Use-Case</h4>
-![Habit](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UMLUML/HabitCorner-Use case.png?raw=true)
-<h4>Activity Diagram</h4>
-![](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UML/HabitCorner-Activity Identity.png)
-![](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UML/HabitCorner-Activity Settings.png)
-![](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UML/HabitCorner-Activity Checklist.png)
-<h4>Class Diagram</h4>
-![](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UML/HabitCorner-Class case.png)
+![](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UML/HabitCorner-Use case.png)
