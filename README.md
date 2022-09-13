@@ -7,4 +7,4 @@
 <p>Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133 (Front-End Developer)</p>
 
 <h4>Use-Case</h4>
-![](https://github.com/aulianurfajriyah/HabitCorner/tree/main/UML/HabitCorner-Use_case.png)
+![](https://github.com/aulianurfajriyah/HabitCorner/UML/HabitCorner-Use_case.png)
