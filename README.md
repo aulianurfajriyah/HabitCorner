@@ -5,3 +5,12 @@
 <p>Ketua Kelompok :  Aulia Nur Fajriyah - 20/456360/TK/50490  (Software Architect)</p>
 <p>Anggota 1 : Adhyaksa Zhalifunnas - 20/463586/TK/51578 (Back-End Developer)</p>
 <p>Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133 (Front-End Developer)</p>
+
+<h4>Use-Case</h4>
+![](UML/HabitCorner-Use case.png)
+<h4>Activity Diagram</h4>
+![](UML/HabitCorner-Activity Identity.png)
+![](UML/HabitCorner-Activity Settings.png)
+![](UML/HabitCorner-Activity Checklist.png)
+<h4>Class Diagram</h4>
+![](UML/HabitCorner-Class case.png)
