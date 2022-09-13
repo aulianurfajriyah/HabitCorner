@@ -9,3 +9,15 @@
 <h4>Use-Case</h4>
 
 ![](UML/HabitCorner-Use_case.png)
+
+<h4>Activity Diagram</h4>
+
+![](UML/HabitCorner-Activity_Identity.png)
+
+![](UML/HabitCorner-Activity_Settings.png)
+
+![](UML/HabitCorner-Activity_Checklist.png)
+
+<h4>Class Diagram</h4>
+
+![](UML/HabitCorner-Class_case.png)
