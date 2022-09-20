@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "pJsuFAKxlOtZgNNl7yGMrEBRNVF2O3hbIPXIRBp0ltZBQaT7tEGt44KfT0IrIxYCF+0no0BS+3EvnJaSsD2NNQ==",
+  "success": true,
+  "projectFilePath": "E:\\C#\\AFAyk\\HabitCorner_Class\\HabitCorner\\HabitCorner\\HabitCorner.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\abc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\abc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
