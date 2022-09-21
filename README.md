@@ -31,6 +31,6 @@
 
 </details>
 
-
+<p>View github page : https://aulianurfajriyah.github.io/HabitCorner/ </p>
 
 
