@@ -9,7 +9,7 @@
 <details>
   <summary><h3>Use-Case</h3></summary>
 
-  ![](UML/HabitCorner-Use_case.png)
+  <img src="UML/HabitCorner-Use_case.png" clas="img--responsive" alt="">
 
 </details>
 <details>
