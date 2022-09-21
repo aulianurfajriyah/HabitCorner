@@ -1,26 +1,36 @@
-Nama Kelompok : AFAyk
+# HabitCorner
+<p><h3>Habit Corner thrives to assist its user on building a healthy habit/lifestyle. This app is desktop application that will displayed in the corner of your home page. </h3></p>
 
-Anggota dan NIM Kelompok : 
-Adhyaksa Zhalifunnas 	(20/463586/TK/51578) 
-Aulia Nur Fajriyah 		(20/456360/TK/50490) 
-Farhan Maulana Firmansyah 	(20/460544/TK/51133) 
+<p>Nama Kelompok : AFAyk</p>
+<p>Ketua Kelompok :  Aulia Nur Fajriyah - 20/456360/TK/50490  (Software Architect)</p>
+<p>Anggota 1 : Adhyaksa Zhalifunnas - 20/463586/TK/51578 (Back-End Developer)</p>
+<p>Anggota 2 : Farhan Maulana Firmansyah - 20/460544/TK/51133 (Front-End Developer)</p>
 
-“Project Junior Project TI” 
+<details>
+  <summary><h3>Use-Case</h3></summary>
 
-Instansi (Departemen Teknologi Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada) 
-Jawaban dari Modul 1 (Nama produk, jenis produk, latar belakang & permasalahan, ide solusi, dan analisis kompetitor) 
+  ![](UML/HabitCorner-Use_case.png)
 
-Nama Aplikasi = HabitCorner 
-Kategori = Gaya Hidup  
-Tipe = Desktop App 
-Kelompok 1 (Rabu B) 
-Adhyaksa Zhalifunnas 	(20/463586/TK/51578) 	  BackEnd Developer
-Aulia Nur Fajriyah 	(20/456360/TK/50490)	  Software Architect.
-Farhan Maulana Firmansyah 	(20/460544/TK/51133) FrontEnd Developer
-Permasalahan =  
-Adanya kesulitan dalam dokumentasi kebiasaan baik yang telah dilakukan atau yang ingin dicapai. Padahal setiap orang sebaiknya memiliki habit yang akan berpengaruh pada kehidupan mereka dan lingkungan sekitar. 
- 
-Solusi =  
-HabitCorner akan memudahkan user dalam mencatat perkembangan kebiasaan yang sedang dilakukan atau yang ingin dicapai. Sehingga akan tercipta habit baru yang terdokumentasi dan termonitor dengan baik. 
- 
-Aplikasi sejenis = Habit Tracker, HabitNow 
+</details>
+<details>
+  <summary><h3>Activity Diagram</h3></summary>
+
+  ![](UML/HabitCorner-Activity_Identity.png)
+
+  ![](UML/HabitCorner-Activity_Create_Target.png)
+
+  ![](UML/HabitCorner-Activity_Settings.png)
+
+  ![](UML/HabitCorner-Activity_Checklist.png)
+  
+</details>
+<details>
+  <summary><h3>Class Diagram</h3></summary>
+  
+  ![](UML/HabitCorner-Class_case.png)
+
+</details>
+
+
+
+
