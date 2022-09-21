@@ -15,19 +15,15 @@
 <details>
   <summary><h3>Activity Diagram</h3></summary>
 
-  ![](UML/HabitCorner-Activity_Identity.png)
+<img src="UML/HabitCorner-Activity_Identity.png" class="img-responsive" alt="">
+<img src="UML/HabitCorner-Activity_Create_Target.png" class="img-responsive" alt="">
+<img src="UML/HabitCorner-Activity_Settings.png" class="img-responsive" alt="">
+<img src="UML/HabitCorner-Activity_Checklist.png" class="img-responsive" alt="">
 
-  ![](UML/HabitCorner-Activity_Create_Target.png)
-
-  ![](UML/HabitCorner-Activity_Settings.png)
-
-  ![](UML/HabitCorner-Activity_Checklist.png)
-  
 </details>
 <details>
   <summary><h3>Class Diagram</h3></summary>
-  
-  ![](UML/HabitCorner-Class_case.png)
+  <img src="UML/HabitCorner-Class_case.png" class="img-responsive" alt="">
 
 </details>
 
