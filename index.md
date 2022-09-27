@@ -26,6 +26,11 @@
   <img src="UML/HabitCorner-Class_case.png" class="img-responsive" alt="">
 
 </details>
+<details>
+  <summary><h3>Entity Relationship Diagram</h3></summary>
+  <img src="UML/HabitCorner-ERD.png" class="img-responsive" alt="">
+
+</details>
 
 
 
