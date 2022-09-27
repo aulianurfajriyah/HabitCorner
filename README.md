@@ -30,6 +30,12 @@
   ![](UML/HabitCorner-Class_case.png)
 
 </details>
+<details>
+  <summary><h3>Entity Relationship Diagram</h3></summary>
+  
+  ![](UML/HabitCorner-ERD.png)
+
+</details>
 
 <p>View github page : https://aulianurfajriyah.github.io/HabitCorner/ </p>
 
