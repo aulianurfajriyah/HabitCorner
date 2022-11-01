@@ -6,9 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\abc\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\abc\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+      "C:\\Users\\AULIA ASUSK401L\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\AULIA ASUSK401L\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
