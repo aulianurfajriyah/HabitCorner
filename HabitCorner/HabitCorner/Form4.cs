@@ -27,7 +27,19 @@ namespace HabitCorner
 
         private void label12_Click(object sender, EventArgs e)
         {
+            var form2 = new Form2();
+            form2.Show();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

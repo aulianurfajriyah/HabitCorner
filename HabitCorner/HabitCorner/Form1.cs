@@ -29,7 +29,8 @@ namespace HabitCorner
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var form4 = new Form4();
+            form4.Show();
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -40,6 +41,24 @@ namespace HabitCorner
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var form3 = new Form3();
+            form3.Show();
         }
     }
 }
