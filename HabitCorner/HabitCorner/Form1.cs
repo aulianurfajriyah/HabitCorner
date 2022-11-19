@@ -22,7 +22,7 @@ namespace HabitCorner
 
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Th3.St3v3;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Farhan011;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -57,36 +57,37 @@ namespace HabitCorner
 
         private void label12_Click(object sender, EventArgs e)
         {
-            //var form2 = new Form2();
-            //form2.Show();
+            var form2 = new Form2();
+            form2.Show();
 
-            try
-            {
-                conn.Open();
-                sql = @"select * from st_inserthabit(:_habitName, :_habitDate)";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_habitName", tbHabitName.Text);
-                cmd.Parameters.AddWithValue("_habitDate", tbHabitDate.Text);
-                if ((int)cmd.ExecuteScalar() == 1)
-                {
-                    MessageBox.Show("Data users berhasil disimpan", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conn.Close();
-                    btnRefresh.PerformClick();
-                    tbHabitName.Text = tbHabitDate.Text = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "INSERT FAIL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-            }
+            //try
+            //{
+            //    conn.Open();
+            //    sql = @"select * from st_inserthabit(:_habitName, :_habitDate)";
+            //    cmd = new NpgsqlCommand(sql, conn);
+            //    cmd.Parameters.AddWithValue("_habitName", tbHabitName.Text);
+            //    cmd.Parameters.AddWithValue("_habitDate", tbHabitDate.Text);
+            //    if ((int)cmd.ExecuteScalar() == 1)
+            //    {
+            //        MessageBox.Show("Data users berhasil disimpan", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        conn.Close();
+            //        btnRefresh.PerformClick();
+            //        tbHabitName.Text = tbHabitDate.Text = null;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message, "INSERT FAIL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    conn.Close();
+            //}
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //var form2 = new Form2();
-            //form2.Show();
-            if (r == null)
+            var form2 = new Form2();
+            form2.Show();
+
+            /*if (r == null)
             {
                 MessageBox.Show("Mohon pilih baris data yang akan diupdate!", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -94,10 +95,12 @@ namespace HabitCorner
             try
             {
                 conn.Open();
-                sql = @"select * from st_updatehabit(:_habitName, :_habitDate)";
+                sql = @"select * from st_updatehabit(:_habitId, :_habitName, :_habitDate)";
                 cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("_habitid", r.Cells["_habitid"].Value.ToString());
                 cmd.Parameters.AddWithValue("_habitName", tbHabitName.Text);
                 cmd.Parameters.AddWithValue("_habitDate", tbHabitDate.Text);
+                //cmd.Parameters.AddWithValue("_habitStatus", tbHabitStatus.Text);
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Data users berhasil diupdate", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -111,6 +114,7 @@ namespace HabitCorner
             {
                 MessageBox.Show("Error: " + ex.Message, "FAIL UPDATE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            conn.Close();*/
 
         }
 
@@ -118,7 +122,33 @@ namespace HabitCorner
         {
             //var form3 = new Form3();
             //form3.Show();
-
+            if (r==null)
+            {
+                MessageBox.Show("Mohon pilih baris", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["_habitName"].Value.ToString()+" ?", "Hapus data terkonfirmasi", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                try
+                {
+                    conn.Open();
+                    sql = @"select * from st_deletehabit(:_habitId)";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_habitid", r.Cells["_habitid"].Value.ToString());
+                    if ((int)cmd.ExecuteScalar() == 1)
+                    {
+                        MessageBox.Show("Data users berhasil dihapus", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conn.Close();
+                        btnRefresh.PerformClick();
+                        tbHabitName.Text = tbHabitDate.Text = tbHabitStatus.Text = null;
+                        r = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "FAIL Delete!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            conn.Close();  
 
         }
 

@@ -17,7 +17,7 @@ namespace HabitCorner
         }
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Th3.St3v3;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Farhan011;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -72,6 +72,27 @@ namespace HabitCorner
             if (e.RowIndex >= 0)
             {
                 r = dgvData_deploy.Rows[e.RowIndex];
+            }
+        }
+
+        private void pbRefresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                dgvData_deploy.DataSource = null;
+                sql = "select * from st_selecthabit()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvData_deploy.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Fail!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
             }
         }
     }

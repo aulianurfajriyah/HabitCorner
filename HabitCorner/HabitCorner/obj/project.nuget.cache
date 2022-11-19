@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Svy1PmzdhKnJhXvga1Ot84HQ0hZp6fYI9Bgblih779eJYoVkvAvjjn0jn6HxIkD465SrrGePIrMjgQQpEAfUkw==",
+  "dgSpecHash": "Tc/FNbWT5BUcIjuKjpxozuD5qRphDKReYdL4hx6k2c+5Od36J/Zi7hXvjuJiKf/6ablBCqMsgdLxg7NZxmI2TA==",
   "success": true,
-  "projectFilePath": "E:\\C#\\AFAyk\\HabitCorner_PostgreSQL\\HabitCorner\\HabitCorner\\HabitCorner\\HabitCorner.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Downloads\\HabitCorner\\HabitCorner\\HabitCorner\\HabitCorner.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\abc\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
-    "C:\\Users\\abc\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\abc\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
-    "C:\\Users\\abc\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Lenovo\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

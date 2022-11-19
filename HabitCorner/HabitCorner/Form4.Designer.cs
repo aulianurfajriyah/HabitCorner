@@ -33,8 +33,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvData_deploy = new System.Windows.Forms.DataGridView();
+            this.pbRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData_deploy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -86,11 +88,24 @@
             this.dgvData_deploy.TabIndex = 47;
             this.dgvData_deploy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_deploy_CellClick);
             // 
+            // pbRefresh
+            // 
+            this.pbRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("pbRefresh.Image")));
+            this.pbRefresh.Location = new System.Drawing.Point(64, 134);
+            this.pbRefresh.Name = "pbRefresh";
+            this.pbRefresh.Size = new System.Drawing.Size(24, 24);
+            this.pbRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRefresh.TabIndex = 48;
+            this.pbRefresh.TabStop = false;
+            this.pbRefresh.Click += new System.EventHandler(this.pbRefresh_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 157);
+            this.ClientSize = new System.Drawing.Size(253, 159);
+            this.Controls.Add(this.pbRefresh);
             this.Controls.Add(this.dgvData_deploy);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -101,6 +116,7 @@
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData_deploy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +127,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvData_deploy;
+        private System.Windows.Forms.PictureBox pbRefresh;
     }
 }
