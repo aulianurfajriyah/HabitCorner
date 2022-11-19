@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,33 @@ namespace HabitCorner
             InitializeComponent();
         }
 
+        private NpgsqlConnection conn;
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Th3.St3v3;Database=HabitCorner";
+
+        public DataTable dt;
+        public static NpgsqlCommand cmd;
+        private string sql = null;
+        private DataGridViewRow r;
+
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            conn = new NpgsqlConnection(connstring);
+            try
+            {
+                conn.Open();
+                dgvData_deploy.DataSource = null;
+                sql = "select * from st_selectHabit()";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+                dt.Load(rd);
+                dgvData_deploy.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Fail!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -40,6 +65,14 @@ namespace HabitCorner
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvData_deploy_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                r = dgvData_deploy.Rows[e.RowIndex];
+            }
         }
     }
 }

@@ -15,10 +15,19 @@ namespace HabitCorner_Class
         private string habitPeriode;
         private string habitDeadline;
 
+
+
         public int HabitID { get => habitID; set => habitID = value; }
         public string HabitName { get => habitName; set => habitName = value; }
+        public string HabitStart { get => habitStart; set => habitStart = value; }
         public string HabitPeriode { get => habitPeriode; set => habitPeriode = value; }
         public string HabitDeadline { get => habitDeadline; set => habitDeadline = value; }
+
+        public Habit(int habitID, string habitName)
+        {
+            HabitID = habitID;
+            HabitName = habitName;
+        }
 
         public static void CreateHabit()
         {
