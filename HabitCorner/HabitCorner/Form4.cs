@@ -26,6 +26,10 @@ namespace HabitCorner
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            int screenwidth = Screen.PrimaryScreen.Bounds.Size.Width;
+            int formwidth = this.Width;
+            this.Location = new Point(screenwidth - formwidth, 0);
+
             conn = new NpgsqlConnection(connstring);
             try
             {
@@ -94,6 +98,12 @@ namespace HabitCorner
                 MessageBox.Show("Error:" + ex.Message, "Fail!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Show();
         }
     }
 }
