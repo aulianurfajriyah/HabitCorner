@@ -48,7 +48,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(193, 138);
+            this.button1.Location = new System.Drawing.Point(253, 138);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 34);
@@ -75,11 +75,12 @@
             this.dgvData_deploy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData_deploy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvData_deploy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData_deploy.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dgvData_deploy.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvData_deploy.Location = new System.Drawing.Point(0, 0);
             this.dgvData_deploy.Name = "dgvData_deploy";
             this.dgvData_deploy.RowTemplate.Height = 25;
-            this.dgvData_deploy.Size = new System.Drawing.Size(296, 125);
+            this.dgvData_deploy.Size = new System.Drawing.Size(358, 130);
             this.dgvData_deploy.TabIndex = 47;
             this.dgvData_deploy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_deploy_CellClick);
             // 
@@ -113,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 181);
+            this.ClientSize = new System.Drawing.Size(358, 181);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbRefresh);
             this.Controls.Add(this.dgvData_deploy);
@@ -124,7 +125,7 @@
             this.MaximizeBox = false;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Corner";
+            this.Text = "Habit Corner";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData_deploy)).EndInit();

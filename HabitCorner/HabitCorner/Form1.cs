@@ -102,7 +102,7 @@ namespace HabitCorner
             //form3.Show();
             if (r==null)
             {
-                MessageBox.Show("Mohon pilih baris", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mohon pilih baris yang akan dihapus", "Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["_habitName"].Value.ToString()+" ?", "Hapus data terkonfirmasi", 
