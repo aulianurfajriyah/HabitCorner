@@ -41,6 +41,18 @@ namespace HabitCorner
         private void button1_Click(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
+            
+            if(String.IsNullOrEmpty(tbHabitNamef2.Text))
+            {
+                MessageBox.Show("Mohon isi data dengan lengkap", "Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (String.IsNullOrEmpty(tbHabitDatef2.Text))
+            {
+                MessageBox.Show("Mohon isi data dengan lengkap", "Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
             try
             {

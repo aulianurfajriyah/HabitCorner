@@ -102,7 +102,7 @@ namespace HabitCorner
             //form3.Show();
             if (r==null)
             {
-                MessageBox.Show("Mohon pilih baris", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mohon pilih baris yang akan dihapus", "Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["_habitName"].Value.ToString()+" ?", "Hapus data terkonfirmasi", 
@@ -118,7 +118,8 @@ namespace HabitCorner
                         MessageBox.Show("Data users berhasil dihapus", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
                         pictureBox5_Click(this.pictureBox5, null);
-                        tbHabitName.Text = tbHabitDate.Text = tbHabitStatus.Text = null;
+                        //tbhabitname.text = tbhabitdate.text = tbhabitstatus.text = null;
+                        lblHabitNameChange.Text = lblHabitDeadlineChange.Text = lblHabitStatusChange.Text = null;
                         r = null;
                     }
                 }
@@ -135,14 +136,21 @@ namespace HabitCorner
             if (e.RowIndex >= 0)
             {
                 r = dgvData.Rows[e.RowIndex];
-                tbHabitName.Text = r.Cells["_habitName"].Value.ToString();
-                tbHabitDate.Text = r.Cells["_habitDate"].Value.ToString();
-                tbHabitStatus.Text = r.Cells["_habitStatus"].Value.ToString();
+                //tbhabitname.text = r.cells["_habitname"].value.tostring();
+                //tbhabitdate.text = r.cells["_habitdate"].value.tostring();
+                //tbhabitstatus.text = r.cells["_habitstatus"].value.tostring();
+                lblHabitNameChange.Text = r.Cells["_habitName"].Value.ToString();
+                lblHabitDeadlineChange.Text = r.Cells["_habitDate"].Value.ToString();
+                lblHabitStatusChange.Text = r.Cells["_habitStatus"].Value.ToString();
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lblDate.Text = DateTime.Now.ToString("ddd,dd MMM yyyy");
+            lblTime.Text = DateTime.Now.ToString("hh:mm tt");
+
+
             conn = new NpgsqlConnection(connstring);
             try
             {
@@ -161,6 +169,8 @@ namespace HabitCorner
                 MessageBox.Show("Error:" + ex.Message, "Fail!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            lblRefreshData.Visible = false;
+            pbLoading.Visible = false;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -190,7 +200,7 @@ namespace HabitCorner
             //}
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private async void pictureBox5_Click(object sender, EventArgs e)
         {
             try
             {
@@ -209,6 +219,32 @@ namespace HabitCorner
                 MessageBox.Show("Error:" + ex.Message, "Fail!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+
+            lblRefreshData.Visible= true;
+            pbLoading.Visible= true;
+            await Task.Delay(2000);
+            lblRefreshData.Visible = false;
+            pbLoading.Visible = false;
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
