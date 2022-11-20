@@ -57,29 +57,7 @@ namespace HabitCorner
 
         private void label12_Click(object sender, EventArgs e)
         {
-            var form2 = new Form2();
-            form2.Show();
-
-            //try
-            //{
-            //    conn.Open();
-            //    sql = @"select * from st_inserthabit(:_habitName, :_habitDate)";
-            //    cmd = new NpgsqlCommand(sql, conn);
-            //    cmd.Parameters.AddWithValue("_habitName", tbHabitName.Text);
-            //    cmd.Parameters.AddWithValue("_habitDate", tbHabitDate.Text);
-            //    if ((int)cmd.ExecuteScalar() == 1)
-            //    {
-            //        MessageBox.Show("Data users berhasil disimpan", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        conn.Close();
-            //        btnRefresh.PerformClick();
-            //        tbHabitName.Text = tbHabitDate.Text = null;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error: " + ex.Message, "INSERT FAIL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    conn.Close();
-            //}
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -139,7 +117,7 @@ namespace HabitCorner
                     {
                         MessageBox.Show("Data users berhasil dihapus", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
-                        btnRefresh.PerformClick();
+                        pictureBox5_Click(this.pictureBox5, null);
                         tbHabitName.Text = tbHabitDate.Text = tbHabitStatus.Text = null;
                         r = null;
                     }
@@ -152,8 +130,20 @@ namespace HabitCorner
 
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                r = dgvData.Rows[e.RowIndex];
+                tbHabitName.Text = r.Cells["_habitName"].Value.ToString();
+                tbHabitDate.Text = r.Cells["_habitDate"].Value.ToString();
+                tbHabitStatus.Text = r.Cells["_habitStatus"].Value.ToString();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            conn = new NpgsqlConnection(connstring);
             try
             {
                 conn.Open();
@@ -173,20 +163,35 @@ namespace HabitCorner
             }
         }
 
-        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                r = dgvData.Rows[e.RowIndex];
-                tbHabitName.Text = r.Cells["_habitName"].Value.ToString();
-                tbHabitDate.Text = r.Cells["_habitDate"].Value.ToString();
-                tbHabitStatus.Text = r.Cells["_habitStatus"].Value.ToString();
-            }
+            var form2 = new Form2();
+            form2.Show();
+
+            //try
+            //{
+            //    conn.Open();
+            //    sql = @"select * from st_inserthabit(:_habitName, :_habitDate)";
+            //    cmd = new NpgsqlCommand(sql, conn);
+            //    cmd.Parameters.AddWithValue("_habitName", tbHabitName.Text);
+            //    cmd.Parameters.AddWithValue("_habitDate", tbHabitDate.Text);
+            //    if ((int)cmd.ExecuteScalar() == 1)
+            //    {
+            //        MessageBox.Show("Data users berhasil disimpan", "Well Done!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        conn.Close();
+            //        btnRefresh.PerformClick();
+            //        tbHabitName.Text = tbHabitDate.Text = null;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message, "INSERT FAIL!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    conn.Close();
+            //}
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            conn = new NpgsqlConnection(connstring);
             try
             {
                 conn.Open();
