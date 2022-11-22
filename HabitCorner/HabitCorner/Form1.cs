@@ -22,12 +22,19 @@ namespace HabitCorner
 
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Farhan011;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Th3.St3v3;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
         private DataGridViewRow r;
+
+
+        public static string habitId_to_update;
+        public static string habitName_to_update;
+        public static string habitDeadline_to_update;
+        public static string habitStatus_to_update;
+
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -62,8 +69,17 @@ namespace HabitCorner
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            var form2 = new Form2();
-            form2.Show();
+            if (r == null)
+            {
+                MessageBox.Show("Mohon pilih baris data yang akan diupdate!", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            habitId_to_update = lblHabitIDChange.Text;
+            habitName_to_update = lblHabitNameChange.Text;
+            habitDeadline_to_update = lblHabitDeadlineChange.Text;
+            habitStatus_to_update = lblHabitStatusChange.Text;
+            var form3 = new Form3();
+            form3.Show();
 
             /*if (r == null)
             {
@@ -139,9 +155,27 @@ namespace HabitCorner
                 //tbhabitname.text = r.cells["_habitname"].value.tostring();
                 //tbhabitdate.text = r.cells["_habitdate"].value.tostring();
                 //tbhabitstatus.text = r.cells["_habitstatus"].value.tostring();
+                lblHabitIDChange.Text = r.Cells["_habitid"].Value.ToString();
                 lblHabitNameChange.Text = r.Cells["_habitName"].Value.ToString();
                 lblHabitDeadlineChange.Text = r.Cells["_habitDate"].Value.ToString();
                 lblHabitStatusChange.Text = r.Cells["_habitStatus"].Value.ToString();
+                try
+                {
+                    if (lblHabitStatusChange.Text == "True")
+                    {
+                        lblHabitStatusChange.Text = "Done";
+                    }
+                    else if (lblHabitStatusChange.Text == "False")
+                    {
+                        lblHabitStatusChange.Text = "Not yet";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Habit Status need to be Done or Not yet", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
         }
 
