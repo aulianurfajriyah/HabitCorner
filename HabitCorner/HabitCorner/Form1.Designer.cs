@@ -40,6 +40,9 @@ namespace HabitCorner
             this.lblRefreshData = new System.Windows.Forms.Label();
             this.pbLoading = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHabitIDChange = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblHabitStatusChange = new System.Windows.Forms.Label();
             this.lblHabitDeadlineChange = new System.Windows.Forms.Label();
             this.lblHabitNameChange = new System.Windows.Forms.Label();
@@ -145,6 +148,9 @@ namespace HabitCorner
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblHabitIDChange);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.lblHabitStatusChange);
             this.splitContainer1.Panel2.Controls.Add(this.lblHabitDeadlineChange);
             this.splitContainer1.Panel2.Controls.Add(this.lblHabitNameChange);
@@ -231,6 +237,34 @@ namespace HabitCorner
             this.pictureBox1.Size = new System.Drawing.Size(61, 45);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblHabitIDChange
+            // 
+            this.lblHabitIDChange.AutoSize = true;
+            this.lblHabitIDChange.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHabitIDChange.Location = new System.Drawing.Point(116, 100);
+            this.lblHabitIDChange.Name = "lblHabitIDChange";
+            this.lblHabitIDChange.Size = new System.Drawing.Size(12, 15);
+            this.lblHabitIDChange.TabIndex = 39;
+            this.lblHabitIDChange.Text = "-";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(94, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(10, 15);
+            this.label4.TabIndex = 38;
+            this.label4.Text = ":";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 15);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "ID";
             // 
             // lblHabitStatusChange
             // 
@@ -322,7 +356,7 @@ namespace HabitCorner
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(246, 19);
+            this.pictureBox5.Location = new System.Drawing.Point(248, 19);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 33);
@@ -337,7 +371,7 @@ namespace HabitCorner
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(292, 20);
+            this.pictureBox4.Location = new System.Drawing.Point(294, 20);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
@@ -352,10 +386,10 @@ namespace HabitCorner
             this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvData.Location = new System.Drawing.Point(0, 102);
+            this.dgvData.Location = new System.Drawing.Point(0, 128);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowTemplate.Height = 25;
-            this.dgvData.Size = new System.Drawing.Size(412, 276);
+            this.dgvData.Size = new System.Drawing.Size(412, 250);
             this.dgvData.TabIndex = 21;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             // 
@@ -365,7 +399,7 @@ namespace HabitCorner
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(379, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(381, 20);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -379,7 +413,7 @@ namespace HabitCorner
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(335, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(337, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
@@ -438,13 +472,16 @@ namespace HabitCorner
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblHabitNameChange;
-        private System.Windows.Forms.Label lblHabitDeadlineChange;
-        private System.Windows.Forms.Label lblHabitStatusChange;
+        public System.Windows.Forms.Label lblHabitNameChange;
+        public System.Windows.Forms.Label lblHabitDeadlineChange;
+        public System.Windows.Forms.Label lblHabitStatusChange;
         private System.Windows.Forms.PictureBox pbLoading;
         private System.Windows.Forms.Label lblRefreshData;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lblHabitIDChange;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -1,0 +1,99 @@
+create table tb_habit
+(
+	habitId varchar primary key,
+	habitName varchar,
+	habitDate varchar,
+	habitStatus boolean
+)
+
+---create---
+drop function if exists st_insertHabit();
+create or replace function st_insertHabit(
+    _habitName character varying,
+    _habitDate character varying
+)
+returns int AS
+'
+begin
+    insert into public.tb_habit(
+        habitName,
+        habitDate
+    )
+    values(
+        _habitName,
+        _habitDate
+    );
+    if found then
+        return 1;
+    else
+        return 0;
+    end if;
+end
+'
+language plpgsql;
+
+
+---select---
+drop function if exists st_selectHabit();
+create or replace function st_selectHabit()
+returns table(
+    _habitId character varying,
+    _habitName character varying,
+    _habitDate character varying,
+    _habitStatus boolean
+)
+    language plpgsql
+    as
+'
+begin
+    return query
+    select habitId, habitName, habitDate, habitStatus from tb_habit;
+end
+'
+
+
+
+---update---
+drop function if exists st_updateHabit();
+create or replace function st_updateHabit(
+    _habitId character varying,
+    _habitName character varying,
+    _habitDate character varying,
+    _habitStatus boolean
+)
+    returns int as
+'
+begin
+    update tb_habit set
+        habitName = _habitName,
+        habitDate = _habitDate,
+        habitStatus = _habitStatus
+    where habitId = _habitId;
+    if found then
+        return 1;
+    else
+        return 0;
+    end if;
+end
+'
+language plpgsql
+
+
+---delete---
+create or replace function st_deleteHabit
+(
+    _habitId character varying
+)
+returns int as
+'
+begin
+    delete from public.tb_habit
+    where habitId = _habitId;
+    if found then
+        return 1;
+    else
+        return 0;
+    end if;
+end
+'
+language plpgsql;

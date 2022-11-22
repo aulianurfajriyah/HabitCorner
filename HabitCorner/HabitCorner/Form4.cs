@@ -14,10 +14,20 @@ namespace HabitCorner
         public Form4()
         {
             InitializeComponent();
+            DataGridView _dgv = new DataGridView() { Dock = DockStyle.Fill };
+            Controls.Add(_dgv);
         }
 
+        public void CorrectWindowSize()
+        {
+            int width = WinObjFunctions.CountGridWidth(_dgv);
+            ClientSize = new Size(width, ClientSize.Height);
+        }
+
+        DataGridView _dgv;
+
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Farhan011;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Th3.St3v3;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -104,6 +114,18 @@ namespace HabitCorner
         {
             var form2 = new Form2();
             form2.Show();
+        }
+    }
+
+    public static class WinObjFunctions
+    {
+        public static int CountGridWidth(DataGridView dgv)
+        {
+            int width = 0;
+            foreach (DataGridViewColumn column in dgv.Columns)
+                if (column.Visible == true)
+                    width += column.Width;
+            return width += 20;
         }
     }
 }
