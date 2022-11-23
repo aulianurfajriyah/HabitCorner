@@ -13,7 +13,8 @@ namespace HabitCorner
 {
     public partial class Form5 : Form
     {
-        public static string username;
+        public static string username = "Your name here!";
+        public static string birthDate = "DD/MM/YY";
         public Form5()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace HabitCorner
         private void btnSaveUsername_Click(object sender, EventArgs e)
         {
             username = tbUsername.Text;
+            birthDate = tbBirthDate.Text;
             //conn = new NpgsqlConnection(connstring);
             //try
             //{

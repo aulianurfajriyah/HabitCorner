@@ -32,7 +32,7 @@ namespace HabitCorner
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblBirthDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -97,17 +97,17 @@ namespace HabitCorner
             this.lblUsername.Text = "Your name here!";
             this.lblUsername.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // lblBirthDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Indigo;
-            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(22, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "DD/MM/YY";
+            this.lblBirthDate.AutoSize = true;
+            this.lblBirthDate.BackColor = System.Drawing.Color.Indigo;
+            this.lblBirthDate.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblBirthDate.Location = new System.Drawing.Point(22, 91);
+            this.lblBirthDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirthDate.Name = "lblBirthDate";
+            this.lblBirthDate.Size = new System.Drawing.Size(69, 15);
+            this.lblBirthDate.TabIndex = 4;
+            this.lblBirthDate.Text = "DD/MM/YY";
             // 
             // lblTime
             // 
@@ -144,7 +144,7 @@ namespace HabitCorner
             this.splitContainer1.Panel1.Controls.Add(this.pbLoading);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.lblTime);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.lblBirthDate);
             this.splitContainer1.Panel1.Controls.Add(this.lblUsername);
             this.splitContainer1.Panel1.Controls.Add(this.listBox2);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
@@ -373,7 +373,7 @@ namespace HabitCorner
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(254, 19);
+            this.pictureBox5.Location = new System.Drawing.Point(255, 19);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 33);
@@ -388,7 +388,7 @@ namespace HabitCorner
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(300, 20);
+            this.pictureBox4.Location = new System.Drawing.Point(301, 20);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
@@ -417,7 +417,7 @@ namespace HabitCorner
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(387, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(388, 20);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -431,7 +431,7 @@ namespace HabitCorner
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(343, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(344, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
@@ -474,7 +474,7 @@ namespace HabitCorner
         #endregion
         private System.Windows.Forms.ListBox listBox2;
         public System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblBirthDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;

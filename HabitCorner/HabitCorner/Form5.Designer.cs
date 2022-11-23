@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.btnSaveUsername = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbBirthDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +46,7 @@
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(39, 66);
+            this.tbUsername.Location = new System.Drawing.Point(39, 55);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(177, 23);
             this.tbUsername.TabIndex = 1;
@@ -57,7 +59,7 @@
             this.btnSaveUsername.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSaveUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSaveUsername.Location = new System.Drawing.Point(76, 109);
+            this.btnSaveUsername.Location = new System.Drawing.Point(83, 173);
             this.btnSaveUsername.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveUsername.Name = "btnSaveUsername";
             this.btnSaveUsername.Size = new System.Drawing.Size(96, 34);
@@ -66,11 +68,29 @@
             this.btnSaveUsername.UseVisualStyleBackColor = false;
             this.btnSaveUsername.Click += new System.EventHandler(this.btnSaveUsername_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(39, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 15);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Enter your birthday :";
+            // 
+            // tbBirthDate
+            // 
+            this.tbBirthDate.Location = new System.Drawing.Point(39, 115);
+            this.tbBirthDate.Name = "tbBirthDate";
+            this.tbBirthDate.Size = new System.Drawing.Size(177, 23);
+            this.tbBirthDate.TabIndex = 48;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 170);
+            this.ClientSize = new System.Drawing.Size(255, 224);
+            this.Controls.Add(this.tbBirthDate);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSaveUsername);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label1);
@@ -87,5 +107,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Button btnSaveUsername;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbBirthDate;
     }
 }

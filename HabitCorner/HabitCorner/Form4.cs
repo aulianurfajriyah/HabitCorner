@@ -27,7 +27,7 @@ namespace HabitCorner
         DataGridView _dgv;
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=aulianf1007;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=admin;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;

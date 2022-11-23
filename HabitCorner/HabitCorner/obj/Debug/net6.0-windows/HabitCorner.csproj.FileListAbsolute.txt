@@ -67,3 +67,4 @@ D:\HabitCorner\HabitCorner\HabitCorner\obj\Debug\net6.0-windows\HabitCorner.pdb
 D:\HabitCorner\HabitCorner\HabitCorner\obj\Debug\net6.0-windows\HabitCorner.genruntimeconfig.cache
 D:\HabitCorner\HabitCorner\HabitCorner\obj\Debug\net6.0-windows\ref\HabitCorner.dll
 D:\HabitCorner\HabitCorner\HabitCorner\obj\Debug\net6.0-windows\HabitCorner.Form5.resources
+C:\Users\abc\HabitCorner\HabitCorner\HabitCorner\HabitCorner\obj\Debug\net6.0-windows\HabitCorner.Form5.resources
