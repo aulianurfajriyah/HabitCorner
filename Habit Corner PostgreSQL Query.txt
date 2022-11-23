@@ -1,19 +1,59 @@
-create table tb_habit
+-- Table: public.tb_habit
+
+-- DROP TABLE IF EXISTS public.tb_habit;
+
+CREATE TABLE IF NOT EXISTS public.tb_habit
 (
-	habitId varchar primary key,
-	habitName varchar,
-	habitDate varchar,
-	habitStatus boolean
+    habitid character varying COLLATE pg_catalog."default" NOT NULL DEFAULT nextval('tb_habit_habitid_seq'::regclass),
+    habitname character varying COLLATE pg_catalog."default",
+    habitdate character varying COLLATE pg_catalog."default" DEFAULT CURRENT_DATE,
+    habitstatus boolean NOT NULL DEFAULT false,
+    CONSTRAINT tb_habit_pkey PRIMARY KEY (habitid)
 )
 
----create---
-drop function if exists st_insertHabit();
-create or replace function st_insertHabit(
-    _habitName character varying,
-    _habitDate character varying
-)
-returns int AS
-'
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.tb_habit
+    OWNER to postgres;
+
+
+
+-- FUNCTION: public.st_selecthabit()
+
+-- DROP FUNCTION IF EXISTS public.st_selecthabit();
+
+CREATE OR REPLACE FUNCTION public.st_selecthabit(
+	)
+    RETURNS TABLE(_habitid character varying, _habitname character varying, _habitdate character varying, _habitstatus boolean) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+begin
+    return query
+    select habitId, habitName, habitDate, habitStatus from tb_habit;
+end
+$BODY$;
+
+ALTER FUNCTION public.st_selecthabit()
+    OWNER TO postgres;
+
+
+
+-- FUNCTION: public.st_inserthabit(character varying, character varying)
+
+-- DROP FUNCTION IF EXISTS public.st_inserthabit(character varying, character varying);
+
+CREATE OR REPLACE FUNCTION public.st_inserthabit(
+	_habitname character varying,
+	_habitdate character varying)
+    RETURNS integer
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
 begin
     insert into public.tb_habit(
         habitName,
@@ -29,40 +69,27 @@ begin
         return 0;
     end if;
 end
-'
-language plpgsql;
+$BODY$;
 
-
----select---
-drop function if exists st_selectHabit();
-create or replace function st_selectHabit()
-returns table(
-    _habitId character varying,
-    _habitName character varying,
-    _habitDate character varying,
-    _habitStatus boolean
-)
-    language plpgsql
-    as
-'
-begin
-    return query
-    select habitId, habitName, habitDate, habitStatus from tb_habit;
-end
-'
+ALTER FUNCTION public.st_inserthabit(character varying, character varying)
+    OWNER TO postgres;
 
 
 
----update---
-drop function if exists st_updateHabit();
-create or replace function st_updateHabit(
-    _habitId character varying,
-    _habitName character varying,
-    _habitDate character varying,
-    _habitStatus boolean
-)
-    returns int as
-'
+-- FUNCTION: public.st_updatehabit(character varying, character varying, character varying, boolean)
+
+-- DROP FUNCTION IF EXISTS public.st_updatehabit(character varying, character varying, character varying, boolean);
+
+CREATE OR REPLACE FUNCTION public.st_updatehabit(
+	_habitid character varying,
+	_habitname character varying,
+	_habitdate character varying,
+	_habitstatus boolean)
+    RETURNS integer
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
 begin
     update tb_habit set
         habitName = _habitName,
@@ -75,17 +102,24 @@ begin
         return 0;
     end if;
 end
-'
-language plpgsql
+$BODY$;
+
+ALTER FUNCTION public.st_updatehabit(character varying, character varying, character varying, boolean)
+    OWNER TO postgres;
 
 
----delete---
-create or replace function st_deleteHabit
-(
-    _habitId character varying
-)
-returns int as
-'
+
+-- FUNCTION: public.st_deletehabit(character varying)
+
+-- DROP FUNCTION IF EXISTS public.st_deletehabit(character varying);
+
+CREATE OR REPLACE FUNCTION public.st_deletehabit(
+	_habitid character varying)
+    RETURNS integer
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
 begin
     delete from public.tb_habit
     where habitId = _habitId;
@@ -95,35 +129,7 @@ begin
         return 0;
     end if;
 end
-'
-language plpgsql;
+$BODY$;
 
-
-
----------------username---------------
-
----create---
-create table tb_username
-(
-	username varchar primary key
-)
-
----function insert---
-drop function if exists st_insertUsername();
-create or replace function st_insertUsername(
-    _username text
-)
-returns int AS
-'
-begin
-    insert into public.tb_username(
-        _username
-    )
-    values(
-        _username
-    );
-end
-'
-language plpgsql;
-
-
+ALTER FUNCTION public.st_deletehabit(character varying)
+    OWNER TO postgres;
