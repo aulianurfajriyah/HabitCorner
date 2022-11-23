@@ -47,7 +47,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(125, 180);
+            this.button2.Location = new System.Drawing.Point(105, 175);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 31);
@@ -63,7 +63,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(244, 180);
+            this.button1.Location = new System.Drawing.Point(224, 175);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 31);
@@ -75,7 +75,7 @@
             // tbHabitDatef2
             // 
             this.tbHabitDatef2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHabitDatef2.Location = new System.Drawing.Point(125, 110);
+            this.tbHabitDatef2.Location = new System.Drawing.Point(105, 110);
             this.tbHabitDatef2.Margin = new System.Windows.Forms.Padding(2);
             this.tbHabitDatef2.Name = "tbHabitDatef2";
             this.tbHabitDatef2.Size = new System.Drawing.Size(214, 23);
@@ -84,7 +84,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 113);
+            this.label9.Location = new System.Drawing.Point(33, 113);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 15);
@@ -94,7 +94,7 @@
             // tbHabitNamef2
             // 
             this.tbHabitNamef2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHabitNamef2.Location = new System.Drawing.Point(125, 82);
+            this.tbHabitNamef2.Location = new System.Drawing.Point(105, 82);
             this.tbHabitNamef2.Margin = new System.Windows.Forms.Padding(2);
             this.tbHabitNamef2.Name = "tbHabitNamef2";
             this.tbHabitNamef2.Size = new System.Drawing.Size(214, 23);
@@ -103,7 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 85);
+            this.label1.Location = new System.Drawing.Point(15, 85);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 15);
@@ -124,7 +124,7 @@
             // lblHabitIDUpdate
             // 
             this.lblHabitIDUpdate.AutoSize = true;
-            this.lblHabitIDUpdate.Location = new System.Drawing.Point(125, 60);
+            this.lblHabitIDUpdate.Location = new System.Drawing.Point(105, 60);
             this.lblHabitIDUpdate.Name = "lblHabitIDUpdate";
             this.lblHabitIDUpdate.Size = new System.Drawing.Size(12, 15);
             this.lblHabitIDUpdate.TabIndex = 51;
@@ -133,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 60);
+            this.label2.Location = new System.Drawing.Point(36, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 52;
@@ -142,7 +142,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 141);
+            this.label3.Location = new System.Drawing.Point(47, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 15);
             this.label3.TabIndex = 53;
@@ -150,7 +150,7 @@
             // 
             // tbHabitStatus
             // 
-            this.tbHabitStatus.Location = new System.Drawing.Point(125, 138);
+            this.tbHabitStatus.Location = new System.Drawing.Point(105, 138);
             this.tbHabitStatus.Name = "tbHabitStatus";
             this.tbHabitStatus.Size = new System.Drawing.Size(214, 23);
             this.tbHabitStatus.TabIndex = 54;

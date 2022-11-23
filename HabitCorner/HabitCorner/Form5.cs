@@ -32,6 +32,18 @@ namespace HabitCorner
 
         private void btnSaveUsername_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(tbUsername.Text))
+            {
+                MessageBox.Show("Mohon isi data dengan lengkap", "Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (String.IsNullOrEmpty(tbBirthDate.Text))
+            {
+                MessageBox.Show("Mohon isi data dengan lengkap", "Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             username = tbUsername.Text;
             birthDate = tbBirthDate.Text;
             //conn = new NpgsqlConnection(connstring);

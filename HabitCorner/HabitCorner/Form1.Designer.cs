@@ -89,7 +89,7 @@ namespace HabitCorner
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Indigo;
             this.lblUsername.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblUsername.Location = new System.Drawing.Point(22, 70);
+            this.lblUsername.Location = new System.Drawing.Point(17, 73);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(93, 15);
@@ -102,7 +102,7 @@ namespace HabitCorner
             this.lblBirthDate.AutoSize = true;
             this.lblBirthDate.BackColor = System.Drawing.Color.Indigo;
             this.lblBirthDate.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblBirthDate.Location = new System.Drawing.Point(22, 91);
+            this.lblBirthDate.Location = new System.Drawing.Point(17, 91);
             this.lblBirthDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBirthDate.Name = "lblBirthDate";
             this.lblBirthDate.Size = new System.Drawing.Size(69, 15);
@@ -181,7 +181,7 @@ namespace HabitCorner
             this.pictureBox6.BackColor = System.Drawing.Color.Indigo;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(119, 73);
+            this.pictureBox6.Location = new System.Drawing.Point(118, 73);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 33);
@@ -248,10 +248,12 @@ namespace HabitCorner
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(52, 7);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
@@ -373,7 +375,7 @@ namespace HabitCorner
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(255, 19);
+            this.pictureBox5.Location = new System.Drawing.Point(235, 19);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 33);
@@ -388,7 +390,7 @@ namespace HabitCorner
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(301, 20);
+            this.pictureBox4.Location = new System.Drawing.Point(281, 20);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
@@ -417,7 +419,7 @@ namespace HabitCorner
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(388, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(368, 20);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -431,7 +433,7 @@ namespace HabitCorner
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(344, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(324, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
