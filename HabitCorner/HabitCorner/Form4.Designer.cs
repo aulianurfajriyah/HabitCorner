@@ -34,10 +34,12 @@
             this.dgvData_deploy = new System.Windows.Forms.DataGridView();
             this.pbRefresh = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData_deploy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -48,7 +50,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(314, 136);
+            this.button1.Location = new System.Drawing.Point(305, 7);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 34);
@@ -61,7 +63,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 142);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 28);
@@ -80,7 +82,7 @@
             this.dgvData_deploy.Location = new System.Drawing.Point(0, 0);
             this.dgvData_deploy.Name = "dgvData_deploy";
             this.dgvData_deploy.RowTemplate.Height = 25;
-            this.dgvData_deploy.Size = new System.Drawing.Size(413, 130);
+            this.dgvData_deploy.Size = new System.Drawing.Size(413, 131);
             this.dgvData_deploy.TabIndex = 47;
             this.dgvData_deploy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_deploy_CellClick);
             // 
@@ -89,7 +91,7 @@
             this.pbRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("pbRefresh.Image")));
-            this.pbRefresh.Location = new System.Drawing.Point(120, 141);
+            this.pbRefresh.Location = new System.Drawing.Point(114, 11);
             this.pbRefresh.Name = "pbRefresh";
             this.pbRefresh.Size = new System.Drawing.Size(28, 28);
             this.pbRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +103,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(9, 142);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
@@ -110,16 +112,26 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pbRefresh);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 131);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(413, 50);
+            this.panel1.TabIndex = 50;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(413, 181);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pbRefresh);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvData_deploy);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -131,6 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvData_deploy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -141,5 +154,6 @@
         private System.Windows.Forms.DataGridView dgvData_deploy;
         private System.Windows.Forms.PictureBox pbRefresh;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
