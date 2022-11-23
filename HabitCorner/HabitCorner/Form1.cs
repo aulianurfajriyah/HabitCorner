@@ -22,7 +22,7 @@ namespace HabitCorner
 
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=aulianf1007;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=admin;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -183,7 +183,6 @@ namespace HabitCorner
         {
             lblDate.Text = DateTime.Now.ToString("ddd,dd MMM yyyy");
             lblTime.Text = DateTime.Now.ToString("hh:mm tt");
-            lblUsername.Text = Form5.username;
 
             conn = new NpgsqlConnection(connstring);
             try
@@ -255,6 +254,7 @@ namespace HabitCorner
             }
 
             lblUsername.Text = Form5.username;
+            lblBirthDate.Text = Form5.birthDate;
             lblRefreshData.Visible= true;
             pbLoading.Visible= true;
             await Task.Delay(2000);
