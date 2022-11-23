@@ -22,7 +22,7 @@ namespace HabitCorner
 
 
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=Th3.St3v3;Database=HabitCorner";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=aulianf1007;Database=HabitCorner";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -41,7 +41,7 @@ namespace HabitCorner
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -183,7 +183,7 @@ namespace HabitCorner
         {
             lblDate.Text = DateTime.Now.ToString("ddd,dd MMM yyyy");
             lblTime.Text = DateTime.Now.ToString("hh:mm tt");
-
+            lblUsername.Text = Form5.username;
 
             conn = new NpgsqlConnection(connstring);
             try
@@ -254,6 +254,7 @@ namespace HabitCorner
                 conn.Close();
             }
 
+            lblUsername.Text = Form5.username;
             lblRefreshData.Visible= true;
             pbLoading.Visible= true;
             await Task.Delay(2000);
@@ -279,6 +280,12 @@ namespace HabitCorner
         private void button1_Click_1(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            var form5 = new Form5();
+            form5.Show();
         }
     }
 }

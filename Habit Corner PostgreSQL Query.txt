@@ -97,3 +97,33 @@ begin
 end
 '
 language plpgsql;
+
+
+
+---------------username---------------
+
+---create---
+create table tb_username
+(
+	username varchar primary key
+)
+
+---function insert---
+drop function if exists st_insertUsername();
+create or replace function st_insertUsername(
+    _username text
+)
+returns int AS
+'
+begin
+    insert into public.tb_username(
+        _username
+    )
+    values(
+        _username
+    );
+end
+'
+language plpgsql;
+
+
